@@ -2,4 +2,4 @@
 title: There are consequences
 ---
 
-Some are significant
+Some are significant.
