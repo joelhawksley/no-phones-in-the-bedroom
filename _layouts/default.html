@@ -3,7 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+    <style>
+      body {
+        background-color: rgb(251, 247, 240);
+        padding: 2.65em 6em 0 3.5em;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .index-chapter {
+        margin: 2rem 0;
+      }
+
+      .index-chapter h2 {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 60px;
+      }
+
+      footer {
+        margin: 5rem 0;
+        font-size: .9rem;
+      }
+    </style>
   </head>
   <body>
     {{ content }}
