@@ -3,13 +3,10 @@ layout: default
 title: No Phones in the Bedroom
 ---
 
-<img class="logo" src="assets/img/logo.png" width="300" alt="No Phones in the Bedroom" /></a></li>
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <time class="post-meta">{{ post.date | date: '%B %d, %Y' }}</time>
-      <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+  <article>
+    <time class="post-meta">{{ post.date | date: '%B %d, %Y' }} - {{ post.author }}</time>
+    <a class="title" href="{{ post.url | prepend: site.baseurl }}"><h2>{{ post.title }}</h2></a>
+    {{ post.content }}
+  </article>
+{% endfor %}

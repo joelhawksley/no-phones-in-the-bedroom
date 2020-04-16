@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<a href="/"><h2>No Phones in the Bedroom</h2></a>
-<h1>{{ post.title }}</h1>
-<div id="chapter">
-{{ content }}
-</div>
+<article>
+  <time class="post-meta">{{ page.date | date: '%B %d, %Y' }} - {{ post.author }}</time>
+  <a class="title" href="{{ page.url | prepend: site.baseurl }}"><h2>{{ page.title }}</h2></a>
+  {{ content }}
+</article>
