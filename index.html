@@ -14,15 +14,4 @@ title: No Phones in the Bedroom
       </li>
     {% endfor %}
   </ul>
-  <h2>Book</h2>
-  {% for chapter in site.chapters %}
-  <div class="index-chapter">
-    <small>Chapter {{ forloop.index }}</small>
-    <h2>
-      <a href="{{ chapter.url }}">
-      {{ chapter.title }}
-      </a>
-    </h2>
-  </div>
-  {% endfor %}
 </div>
