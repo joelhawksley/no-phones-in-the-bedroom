@@ -2,20 +2,7 @@ timezone: America/Denver
 
 strict_front_matter: true
 
-collections:
-  chapters:
-    output: true
-    order: 
-      - technology-is-addicting.md
-      - there-are-consequences.md
-      - we-can-do-better.md
-
 defaults:
-  - scope:
-      path: ""
-      type: "chapters"
-    values:
-      layout: "chapter"
   - scope:
       path: ""
       type: "posts"
@@ -25,3 +12,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "assets/img"
+    values:
+      image: true

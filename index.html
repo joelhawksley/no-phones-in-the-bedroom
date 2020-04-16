@@ -3,26 +3,10 @@ layout: default
 title: No Phones in the Bedroom
 ---
 
-<h1>No Phones in the Bedroom</h1>
-
-<div>
-  <h2>Posts</h2>
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-  <h2>Book</h2>
-  {% for chapter in site.chapters %}
-  <div class="index-chapter">
-    <small>Chapter {{ forloop.index }}</small>
-    <h2>
-      <a href="{{ chapter.url }}">
-      {{ chapter.title }}
-      </a>
-    </h2>
-  </div>
-  {% endfor %}
-</div>
+{% for post in site.posts %}
+  <article>
+    <time class="post-meta">{{ post.date | date: '%B %d, %Y' }} - {{ post.author }}</time>
+    <a class="title" href="{{ post.url | prepend: site.baseurl }}"><h2>{{ post.title }}</h2></a>
+    {{ post.content }}
+  </article>
+{% endfor %}
